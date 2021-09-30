@@ -6,6 +6,8 @@
 
 package baseline;
 import java.util.*;
+import java.util.Arrays;
+
 public class Solution24 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -23,17 +25,41 @@ public class Solution24 {
 
         // the two words will be anagrams if the function isAnagram returns true
         // to do this we use boolean logic
-        isAnagram(s1,  s2);
+
 
         // print s1 and s2 are anagrams if true
+        if(isAnagram(s1, s2)) {
+            System.out.printf("\"%s\" and \"%s\" are anagrams.", s1, s2);
+        }
         // else print false
+        else{
+            System.out.println("They are not anagrams.");
+        }
     }
 
-    private static boolean isAnagram(String s1, String s2) {
+    public static boolean isAnagram(String s1, String s2) {
+        // get the length of the string
+        int lenS1 = s1.length();
+        int lenS2 = s2.length();
+
         // if the string size is not the same they cannot be anagrams
         // we return false
+        if(lenS1 != lenS2) {
+            return false;
+        }
+        //Otherwise we can sort both strings and return true if they equal each other
+        // have to convert to char array to sort
+        else {
+            char[] arrayS1 = s1.toCharArray();
+            char[] arrayS2 = s2.toCharArray();
+            // sort the arrays
+            Arrays.sort(arrayS1);
+            Arrays.sort(arrayS2);
+            // if they are the same return the result
+            return Arrays.equals(arrayS1,arrayS2);
 
-        //otherwise we can sort both strings and return true if they equal each other
+        }
+
     }
 
     private static void greetUser() {
