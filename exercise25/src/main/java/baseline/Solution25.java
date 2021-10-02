@@ -5,6 +5,8 @@
 package baseline;
 
 import java.util.Scanner;
+import java.util.*;
+
 
 public class Solution25 {
     public static final Scanner in = new Scanner(System.in);
@@ -13,25 +15,52 @@ public class Solution25 {
         // prompt the user for a password and take the input
         promptUser();
         String password = in.nextLine();
-        passwordValidator(password);
+        int length = passwordValidator(password);
 
         // once we have the value we run it against a bunch of if statements for the different conditions
-        judgeValue();
+
+        String judgement = judgeValue(length, password);
+
+        // single output
+        System.out.printf("The password '%s' is a %s password.", password, judgement);
 
     }
-    private static void judgeValue() {
-        // if the password contains only numbers and is fewer than 8 characters it is considered very weak
-
-        //A weak password contains only letters and is fewer than eight characters.
-
-        //A strong password contains letters and at least one number and is at least eight characters.
+    public static String judgeValue(int length, String password) {
+        // hasLower and hasUpper as a way to check if the string contains characters
+        boolean hasLower = false, hasUpper = false, hasDigit = false, specialChar = false;
+        Set <Character> set = new HashSet<>(
+                Arrays.asList('!', '@', '#', '$', '%', '^', '&',
+                        '*', '(', ')', '-', '+'));
+        for(char i : password.toCharArray() ) {
+            if(Character.isLowerCase(i))
+                hasLower = true;
+            if(Character.isUpperCase(i))
+                hasUpper = true;
+            if (Character.isDigit(i))
+                hasDigit = true;
+            if (set.contains(i))
+                specialChar = true;
+        }
 
         // A very strong password contains letters, numbers, and special characters and is at least eight characters.
+        if(hasDigit && hasLower || hasUpper && specialChar && length >= 8)
+            return "Very Strong";
 
-        // use an else statement for the final condition
+        //A strong password contains letters and at least one number and is at least eight characters.
+        else if(hasLower && hasDigit || hasUpper && hasDigit && length >= 8)
+            return "Strong";
+
+        //A weak password contains only letters and is fewer than eight characters.
+        else if(hasUpper && length < 8 || hasLower && length < 8 )
+            return "Weak";
+        // if the password contains only numbers and is fewer than 8 characters it is considered very weak
+         else if(hasDigit && length < 8)
+             return "Very Weak";
+
+         // use an else statement for the final condition
         // If a password does not meet any of these rules, then report it as a password of unknown strength.
-
-        // output the result in a single line
+         else
+             return "Password of unknown strength";
 
     }
 
@@ -40,8 +69,10 @@ public class Solution25 {
         System.out.println("What is your password?");
     }
     // takes in the string and returns a numeric value
-    private static int passwordValidator(String password) {
+    public static int passwordValidator(String password) {
+        return password.length();
          // return the string length
+
     }
 
 
