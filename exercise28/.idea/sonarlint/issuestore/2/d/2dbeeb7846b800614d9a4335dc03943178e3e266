@@ -1,0 +1,7 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ò“‡î
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÝÎ¤Âþÿÿÿÿ
+†
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(æš‡é
+†
+java:S1319""pThe type of "integerArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(¿©ƒ‰
