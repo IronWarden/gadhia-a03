@@ -1,7 +1,8 @@
 
-p
-java:S3008"NRename this field "APR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àô“Ãýÿÿÿÿ8þ–¤¿Ã/
-S	java:S106!"9Replace this use of System.out or System.err by a logger.(…Ë‰öûÿÿÿÿ
-M	java:S106""9Replace this use of System.out or System.err by a logger.(ë¸è
-
-S	java:S106#"9Replace this use of System.out or System.err by a logger.(‰ùð—ùÿÿÿÿ
+i
+java:S3008"NRename this field "APR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àô“Ãýÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(—èÑ÷
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(…Ë‰öûÿÿÿÿ
+T	java:S106$"9Replace this use of System.out or System.err by a logger.(ë¸è
+8Áõ™óÃ/
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(‰ùð—ùÿÿÿÿ8»½×óÃ/

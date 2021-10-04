@@ -27,6 +27,8 @@ public class Solution26 {
 
         // create class PaymentCalculator with a public method called calculateMonthsUntilPaidOff,
         // which takes no parameters and returns the number of months.as per constraint
+        int month = PaymentCalculator.calculateMonthsUntilPaidOff();
+        System.out.printf("It will take you %d months to pay off this card.", month);
     }
 
     private static void promptUser() {
