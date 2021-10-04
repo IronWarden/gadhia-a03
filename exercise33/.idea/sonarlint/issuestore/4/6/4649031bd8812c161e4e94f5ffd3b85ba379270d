@@ -1,0 +1,13 @@
+
+T
+java:S1854"9Remove this useless assignment to local variable "input".(ºÓÂ ýÿÿÿÿ
+E
+java:S1481"*Remove this unused "input" local variable.(ºÓÂ ýÿÿÿÿ
+D
+java:S2140")Use "java.util.Random.nextInt()" instead.(™í²¤ýÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(¢ç‚¾ýÿÿÿÿ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(Ë÷ö©üÿÿÿÿ
+‰
+java:S1319$"gThe type of "choices" should be an interface such as "List" rather than the implementation "ArrayList".(òÂˆŽøÿÿÿÿ8šÎá¾Ä/
+z
+java:S1488%"dImmediately return this expression instead of assigning it to the temporary variable "answerChoice".(ÃçŽ§
