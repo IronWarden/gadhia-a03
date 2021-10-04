@@ -1,0 +1,10 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(È» ðþÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(¿ö–ªùÿÿÿÿ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(ÀúêÙþÿÿÿÿ
+M	java:S106+"9Replace this use of System.out or System.err by a logger.(ˆ‡ˆg
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(¹‘äØþÿÿÿÿ
+N	java:S106="9Replace this use of System.out or System.err by a logger.(‰™ßý
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(‡€Íºÿÿÿÿÿ
+|
+java:S14887"aImmediately return this expression instead of assigning it to the temporary variable "heartRate".(Ë‘òèýÿÿÿÿ
