@@ -4,6 +4,7 @@
  */
 package baseline;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution35 {
@@ -11,12 +12,28 @@ public class Solution35 {
 
     public static void main(String[] args) {
         // prompt user until they enter a blank
-        // use a while loop to take input and store it into an arraylist
-        // an if condition can be used to detect if the string is blank, then terminate the loop
+       ArrayList<String> names = promptUser();
 
         // use a random num generator to generate a number of the size count
-
+        int number = (int)(names.size() * Math.random());
 
         // output the result
+        System.out.printf("The winner is ... %s", names.get(number) );
+    }
+
+    public static ArrayList<String> promptUser() {
+        ArrayList<String> names = new ArrayList<>();
+        String name;
+        do {
+            System.out.println("Enter a name ");
+            name = in.nextLine();
+            // if the input is empty don't add it
+            if(!name.isEmpty() && !name.isBlank())
+                names.add(name);
+        } while(!name.isEmpty() && !name.isBlank());
+        // use a while loop to take input and store it into an arraylist
+
+
+        return names;
     }
 }
